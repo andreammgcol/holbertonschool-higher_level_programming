@@ -10,7 +10,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *one, *two = NULL;
 
-	one = two;
+	one = list;
 	two = list;
 
 	while (one && two && two->next)
@@ -20,13 +20,10 @@ int check_cycle(listint_t *list)
 
 		if (one == two)
 		{
-			one = list;
 			while (one != NULL && two != NULL)
 			{
 				if (one == two)
 					return (1);
-				one = one->next;
-				two = two->next;
 			}
 		}
 	}
