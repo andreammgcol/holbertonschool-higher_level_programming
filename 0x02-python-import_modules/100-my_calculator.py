@@ -17,10 +17,7 @@ if __name__ == "__main__":
         elif sys.argv[2] == '*':
             print('{:d} * {:d} = {:d}'.format(a, b, mul(a, b)))
         elif sys.argv[2] == '/':
-            if b != 0:
                 print('{:d} / {:d} = {:d}'.format(a, b, div(a, b)))
-            else:
-                print('{:d} / {:d} = 0'.format(a, b))
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             sys.exit(1)
