@@ -9,7 +9,14 @@ class Square:
             raise Exception("size must be an integer")
         if size < 0:
             raise Exception("size must be >= 0")
-        self.__position = position
+        if (type(position[0]) != int or type(position[1]) != int):
+            raise Exception("position must be a tuple of 2 positive integers")
+        if len(position) != 2 or type(position) != tuple:
+            raise Exception("position must be a tuple of 2 positive integers")
+        if position[0] < 0 or position[1] < 0:
+            raise Exception("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = position
 
     def area(self):
         return (self.__size * self.__size)
