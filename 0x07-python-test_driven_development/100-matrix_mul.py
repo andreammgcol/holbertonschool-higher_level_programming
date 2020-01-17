@@ -1,5 +1,23 @@
 #!/usr/bin/python3
+"""
+matrix_mul module
+This module miltiplies 2 matrices, this matrices must be a
+list of lists of integers or floats.
+Otherwise raise a TypeError or ValueError exception with custom error messages.
+"""
 def matrix_mul(m_a, m_b):
+    """
+    Arguments:
+    @m_a: matriz 1
+    @m_b: matriz 2
+    
+    Returns:
+    in the successful case, the result of the multiplication
+    
+    Example:
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+    """
     if m_a == [] or m_a == [[]]:
         raise ValueError("m_a can't be empty")
 
