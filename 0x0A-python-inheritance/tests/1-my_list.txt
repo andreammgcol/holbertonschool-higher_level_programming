@@ -1,0 +1,59 @@
+# 1-my_list.txt
+=============================
+ How to Use 1-my_list.py
+=============================
+
+Using function called ''print_sorted(list)''.
+
+>>> MyList = __import__('1-my_list').MyList
+
+test 1
+=======
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 2, 3, 4, 5]
+
+test 2
+=======
+>>> my_list = MyList()
+>>> my_list.append(0)
+>>> my_list.append(-1)
+>>> my_list.append(-2)
+>>> my_list.append(3)
+>>> my_list.append(-5)
+>>> print(my_list)
+[0, -1, -2, 3, -5]
+>>> my_list.print_sorted()
+[-5, -2, -1, 0, 3]
+>>> print(my_list)
+[-5, -2, -1, 0, 3]
+
+test 3
+=======
+>>> my_list = MyList()
+>>> my_list.append(100000000012)
+>>> my_list.append(-1000)
+>>> my_list.append(10)
+>>> my_list.append(300000000000000)
+>>> my_list.append(-5)
+>>> print(my_list)
+[100000000012, -1000, 10, 300000000000000, -5]
+>>> my_list.print_sorted()
+[-1000, -5, 10, 100000000012, 300000000000000]
+>>> print(my_list)
+[-1000, -5, 10, 100000000012, 300000000000000]
+
+test 4
+=======
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
