@@ -146,11 +146,5 @@ class Rectangle(Base):
         method to_dictionary
         Returns: the dictionary representation of a Rectangle
         """
-        # dictionary = {}
-        # for key, value in self.__dict__.items():
-        #     if key == 'id':
-        #         dictionary[key] = value
-        #     else:
-        #         dictionary[key[12:]] = value                            
-        # return dictionary
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width }
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
