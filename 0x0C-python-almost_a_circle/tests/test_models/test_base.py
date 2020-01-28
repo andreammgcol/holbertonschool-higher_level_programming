@@ -1,17 +1,21 @@
 #!/usr/bin/python3
 """
-Module for unittest for the Base class
+Module unittest for the Base class
 """
 import unittest
+import sys
+import os
+import json
 import pep8
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-import os
-import json
 
 
 class TestBaseClass(unittest.TestCase):
+	"""
+    Test cases for the Base class
+    """
 
 	def test_pep8_conformance_base(self):
 		"""Test that we conform to PEP8."""
@@ -51,12 +55,12 @@ class TestBaseClass(unittest.TestCase):
 		bo = Base(2.4)
 		self.assertEqual(bo.id, 2.4)
 
-def test_from_json_string(self):
-        string_js = '[{"id": 89, "width": 10, "height": 4, "x": 1, "y": 2}, \
-            {"id": 7, "width": 1, "height": 7, "x": 6, "y": 5}]'
-        jsonconv = Base.from_json_string(string_js)
-        self.assertTrue(type(jsonconv) is list)
-        self.assertEqual(len(jsonconv), 2)
+	def test_from_json_string(self):
+		string_js = '[{"id": 89, "width": 10, "height": 4, "x": 1, "y": 2}, \
+			{"id": 7, "width": 1, "height": 7, "x": 6, "y": 5}]'
+		jsonconv = Base.from_json_string(string_js)
+		self.assertTrue(type(jsonconv) is list)
+		self.assertEqual(len(jsonconv), 2)
 
 
 
