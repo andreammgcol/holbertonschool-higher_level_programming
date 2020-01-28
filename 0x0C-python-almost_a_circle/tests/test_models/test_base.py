@@ -3,13 +3,11 @@
 Module unittest for the Base class
 """
 import unittest
-import sys
-import os
-import json
-import pep8
 from models.base import Base
-from models.rectangle import Rectangle
 from models.square import Square
+import pep8
+import os
+from models.rectangle import Rectangle
 
 
 class TestBaseClass(unittest.TestCase):
@@ -59,6 +57,3 @@ class TestBaseClass(unittest.TestCase):
         jsonconv = Base.from_json_string(string_js)
         self.assertTrue(type(jsonconv) is list)
         self.assertEqual(len(jsonconv), 2)
-
-if __name__ == "_main_":
-    unittest.main()

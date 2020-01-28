@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
-import sys
-import os
-import json
 import pep8
-from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -139,6 +135,3 @@ class TestSquare(unittest.TestCase):
         obj = None
         json_dictionary = Base.to_json_string(obj)
         self.assertEqual(json_dictionary, "[]")
-
-if __name__ == "_main_":
-    unittest.main()

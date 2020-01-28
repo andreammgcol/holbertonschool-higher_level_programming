@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 
 import unittest
-import sys
-import os
-import json
 import pep8
-from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
-from models.square import Square
 
 
 class Testrectangle(unittest.TestCase):
@@ -165,7 +160,3 @@ class Testrectangle(unittest.TestCase):
         self.assertEqual(r2.area(), 6 * 7)
         self.assertEqual(r3.area(), 10 * 11)
         self.assertEqual(r4.area(), 9999999999999 * 9999999999999)
-
-
-if __name__ == "_main_":
-    unittest.main()
