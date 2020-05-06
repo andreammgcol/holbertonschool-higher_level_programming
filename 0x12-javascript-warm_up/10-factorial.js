@@ -9,4 +9,8 @@ function factorialRecursivo (n) {
   return result;
 }
 const n = parseInt(process.argv[2]);
-console.log(factorialRecursivo(n));
+if (n) {
+  console.log(factorialRecursivo(n));
+} else {
+  console.log(1);
+}
