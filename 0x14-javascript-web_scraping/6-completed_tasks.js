@@ -12,7 +12,7 @@ request(url, (err, response, body) => {
 
     for (const task of tasks) {
       if (task.completed) {
-        var userFound = report.find(element => element.id === task.userId);
+        const userFound = report.find(element => element.id === task.userId);
         if (!userFound) {
           report.push({ id: task.userId, count: 1 });
         } else {
