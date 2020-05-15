@@ -1,4 +1,4 @@
-$.get('https://swapi.co/api/people/5/?format=json', function (characters) {
+$.get('https://swapi-api.hbtn.io/api/people/5/?format=json', function (characters) {
   $('#character').text(characters.name);
 }, 'json'
 );
